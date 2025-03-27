@@ -1,0 +1,15 @@
+Users 
+
+- Admin
+  - see all product 
+  - remove product
+  - add product
+  - delete product 
+  - update product
+  - see all users
+- User
+
+  - see all products 
+
+
+  
