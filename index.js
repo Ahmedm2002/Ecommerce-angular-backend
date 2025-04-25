@@ -5,6 +5,9 @@ const port = 3000;
 const userRoutes = require("./src/routes/products/productRoutes");
 const productRoutes = require("./src/routes/users/userRoutes");
 const mongoose = require("mongoose");
+const morgan = require('morgan')
+
+
 
 dotenv.config()
 console.log(process.env.MONGO_URL);
@@ -22,6 +25,7 @@ if(process.env.MONGO_URL){
   console.log(`Mongo_url not found`)
 }
 
+app.use(morgan('tiny'))
 
 app.use("/user", userRoutes);
 app.use("/product", productRoutes);
